@@ -1,54 +1,151 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-  <meta charset="UTF-8">
-  <title>Isiklikud Sõnumid</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      text-align: center;
-      padding: 30px;
-    }
-    input, button {
-      padding: 8px;
-      margin: 5px;
-    }
-    .message {
-      margin-top: 20px;
-      background: #fff;
-      padding: 15px;
-      border-radius: 8px;
-      display: inline-block;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jõulusõnumid</title>
+<style>
+  body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(180deg, #faf4ef, #e8f3f1);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+  }
+  h1 {
+    color: #c0392b;
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 0 #fff;
+  }
+  p {
+    color: #2e4a2e;
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  input {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #c0392b;
+    border-radius: 10px;
+    outline: none;
+    background: #fffdf9;
+    transition: 0.2s;
+  }
+  input:focus {
+    border-color: #2e4a2e;
+  }
+  button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+  }
+  button:hover {
+    background-color: #a83224;
+  }
+  .message {
+    margin-top: 25px;
+    background: #fffdf9;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    max-width: 320px;
+    font-size: 1.1em;
+    color: #333;
+  }
+
+  /* snowflake animation */
+  .snowflake {
+    position: fixed;
+    top: -10px;
+    color: #fff;
+    font-size: 1.2em;
+    opacity: 0.8;
+    animation: fall linear infinite;
+  }
+  @keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+  }
+
+  .footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #888;
+  }
+</style>
 </head>
 <body>
-  <h1>Leia oma sõnum!</h1>
-  <p>Kirjuta oma nimi ja saa isiklik sõnum:</p>
-
+  <h1>🎄 Leia oma jõulukiri! 🎅</h1>
+  <p>Kirjuta oma nimi ja vaata, mida sulle öelnud on:</p>
   <input type="text" id="name" placeholder="Sinu nimi">
-  <button onclick="showMessage()">Näita sõnumit</button>
-
+  <button onclick="showMessage()">Näita kirjakest</button>
   <div class="message" id="message"></div>
 
+  <div class="footer">✨ Häid jõule kõigile! ✨</div>
+
   <script>
+    // snowflakes
+    const snowCount = 20;
+    for (let i = 0; i < snowCount; i++) {
+      const snow = document.createElement("div");
+      snow.classList.add("snowflake");
+      snow.textContent = "❄";
+      snow.style.left = Math.random() * 100 + "vw";
+      snow.style.animationDuration = 5 + Math.random() * 5 + "s";
+      snow.style.fontSize = 10 + Math.random() * 16 + "px";
+      snow.style.animationDelay = Math.random() * 5 + "s";
+      document.body.appendChild(snow);
+    }
+
     function showMessage() {
-      const nameInput = document.getElementById('name');
-      const name = nameInput.value.trim().toLowerCase(); // lowercase for comparison
+      const name = document.getElementById('name').value.trim().toLowerCase();
       let msg = "";
 
-      if (name === "tristan") {
-        msg = "hei tristan! kas see junn töötab?";
-      } else if (name === "adeele") {
-        msg = "hei allu kuidas jänku elab? kas see asi töötab?";
-      } else if (name === "maria") {
-        msg = "hei hei mannu! miks sa kõnest leavisid?";
-      } else if (name === "helin") {
-        msg = "heh ma olen tark";
-      } else {
-        msg = "Sinule pole kirju.";
-      }
+      // unique messages
+      if (name === "tristan") msg = "hei tristan! kas see junn töötab?";
+      else if (name === "adeele") msg = "hei allu kuidas jänku elab? kas see asi töötab?";
+      else if (name === "maria") msg = "hei hei mannu! miks sa kõnest leavisid?";
+      else if (name === "helin") msg = "heh ma olen tark";
+      else if (name === "sandra") msg = "säh siin on sulle kiri";
+
+      // all others
+      else if (name === "sonja") msg = "tubli töö, helin. see töötab.";
+      else if (name === "eleriin") msg = "tubli töö, helin. see töötab.";
+      else if (name === "teodor") msg = "tubli töö, helin. see töötab.";
+      else if (name === "ruben") msg = "tubli töö, helin. see töötab.";
+      else if (name === "trevon") msg = "tubli töö, helin. see töötab.";
+      else if (name === "natali") msg = "tubli töö, helin. see töötab.";
+      else if (name === "fjodor") msg = "tubli töö, helin. see töötab.";
+      else if (name === "mia") msg = "tubli töö, helin. see töötab.";
+      else if (name === "elise") msg = "tubli töö, helin. see töötab.";
+      else if (name === "konrad") msg = "tubli töö, helin. see töötab.";
+      else if (name === "martin") msg = "tubli töö, helin. see töötab.";
+      else if (name === "toomas") msg = "tubli töö, helin. see töötab.";
+      else if (name === "liisi") msg = "tubli töö, helin. see töötab.";
+      else if (name === "sofia") msg = "tubli töö, helin. see töötab.";
+      else if (name === "rander") msg = "tubli töö, helin. see töötab.";
+      else if (name === "anton") msg = "tubli töö, helin. see töötab.";
+      else if (name === "hugo") msg = "tubli töö, helin. see töötab.";
+      else if (name === "loore") msg = "tubli töö, helin. see töötab.";
+      else if (name === "georg") msg = "tubli töö, helin. see töötab.";
+
+      else msg = "🎁 Sinule pole kirju. Ehk päkapikk eksis uksega?";
 
       document.getElementById('message').textContent = msg;
     }
