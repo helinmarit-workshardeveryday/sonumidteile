@@ -7,7 +7,8 @@
 <style>
   body {
     font-family: "Poppins", Arial, sans-serif;
-    background: linear-gradient(180deg, #faf4ef, #e8f3f1);
+    /* cozy warm gradient: soft yellow to soft orange */
+    background: linear-gradient(180deg, #fff5d6, #ffd9a6);
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -19,13 +20,13 @@
     overflow: hidden;
   }
   h1 {
-    color: #c0392b;
+    color: #c0392b; /* warm red accent */
     font-size: 2em;
     margin-bottom: 10px;
-    text-shadow: 1px 1px 0 #fff;
+    text-shadow: 1px 1px 0 #fff8e1;
   }
   p {
-    color: #2e4a2e;
+    color: #5a3e1b; /* dark warm brown for text */
     font-size: 1em;
     margin-bottom: 20px;
   }
@@ -37,11 +38,11 @@
     border: 2px solid #c0392b;
     border-radius: 10px;
     outline: none;
-    background: #fffdf9;
+    background: #fff8e1;
     transition: 0.2s;
   }
   input:focus {
-    border-color: #2e4a2e;
+    border-color: #5a3e1b;
   }
   button {
     margin-top: 15px;
@@ -60,7 +61,7 @@
   }
   .message {
     margin-top: 25px;
-    background: #fffdf9;
+    background: #fff8e1;
     padding: 15px 20px;
     border-radius: 12px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
@@ -69,46 +70,46 @@
     color: #333;
   }
 
-  /* snowflake animation */
+  /* snowflake animation for cozy sparkle */
   .snowflake {
     position: fixed;
     top: -10px;
     color: #fff;
     font-size: 1.2em;
-    opacity: 0.8;
+    opacity: 0.6;
     animation: fall linear infinite;
   }
   @keyframes fall {
-    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
     100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
   }
 
   .footer {
     margin-top: 40px;
     font-size: 0.9em;
-    color: #888;
+    color: #5a3e1b;
   }
 </style>
 </head>
 <body>
-  <h1>🎄 Leia oma jõulukiri! 🎅</h1>
-  <p>Kirjuta oma nimi ja vaata, mida sulle öelnud on:</p>
+  <h1>🎄 Leia oma jõulusõnum! 🎅</h1>
+  <p>Kirjuta oma nimi või kood ja vaata, mida jõulujumal sulle ütles:</p>
   <input type="text" id="name" placeholder="Sinu nimi">
-  <button onclick="showMessage()">Näita kirjakest</button>
+  <button onclick="showMessage()">Näita kirja!</button>
   <div class="message" id="message"></div>
 
   <div class="footer">✨ Häid jõule kõigile! ✨</div>
 
   <script>
-    // snowflakes
-    const snowCount = 20;
+    // snowflakes / sparkles
+    const snowCount = 15;
     for (let i = 0; i < snowCount; i++) {
       const snow = document.createElement("div");
       snow.classList.add("snowflake");
       snow.textContent = "❄";
       snow.style.left = Math.random() * 100 + "vw";
       snow.style.animationDuration = 5 + Math.random() * 5 + "s";
-      snow.style.fontSize = 10 + Math.random() * 16 + "px";
+      snow.style.fontSize = 10 + Math.random() * 14 + "px";
       snow.style.animationDelay = Math.random() * 5 + "s";
       document.body.appendChild(snow);
     }
@@ -124,7 +125,7 @@
       else if (name === "helin") msg = "heh ma olen tark";
       else if (name === "sandra") msg = "säh siin on sulle kiri";
 
-      // all others
+      // all others individually listed
       else if (name === "sonja") msg = "tubli töö, helin. see töötab.";
       else if (name === "eleriin") msg = "tubli töö, helin. see töötab.";
       else if (name === "teodor") msg = "tubli töö, helin. see töötab.";
@@ -145,7 +146,7 @@
       else if (name === "loore") msg = "tubli töö, helin. see töötab.";
       else if (name === "georg") msg = "tubli töö, helin. see töötab.";
 
-      else msg = "🎁 Sinule pole kirju. Ehk päkapikk eksis uksega?";
+      else msg = "🎁 Sinule pole kirju. Ehk panid midagi valesti?";
 
       document.getElementById('message').textContent = msg;
     }
