@@ -31,38 +31,6 @@
     margin-bottom: 20px;
   }
   input {
-    width: 80%;<!DOCTYPE html>
-<html lang="et">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jõulusõnumid</title>
-<style>
-  body {
-    font-family: "Poppins", Arial, sans-serif;
-    background: linear-gradient(180deg, #fff5d6, #ffd9a6); /* warm cozy colors */
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
-    text-align: center;
-    overflow: hidden;
-  }
-  h1 {
-    color: #c0392b; /* warm red accent */
-    font-size: 2em;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 0 #fff8e1;
-  }
-  p {
-    color: #5a3e1b; /* dark warm brown for text */
-    font-size: 1em;
-    margin-bottom: 20px;
-  }
-  input {
     width: 80%;
     max-width: 300px;
     padding: 10px;
@@ -91,28 +59,18 @@
   button:hover {
     background-color: #a83224;
   }
-
-  /* scroll container */
-  .scroll-container {
-    width: 90%;
-    max-width: 350px;
-    margin-top: 25px;
-    background-image: url('https://media.istockphoto.com/id/1422987701/vector/christmas-scroll-with-copy-space-and-winter-festive-decor-hand-drawn-watercolor-illustration.jpg?s=612x612&w=0&k=20&c=OXVXIpf9p1OJsHdQ90QC12F7MLIXv0lxWOuw3jmRc80=');
-    background-size: cover;
-    background-position: center;
-    padding: 60px 20px; /* adjust top/bottom padding to fit scroll */
-    border-radius: 12px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-  }
   .message {
-    background: transparent;
-    color: #5a3e1b;
+    margin-top: 25px;
+    background: #fff8e1;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    max-width: 320px;
     font-size: 1.1em;
-    text-align: center;
-    line-height: 1.3em;
+    color: #333;
   }
 
-  /* snowflake animation */
+  /* snowflake animation for cozy sparkle */
   .snowflake {
     position: fixed;
     top: -10px;
@@ -135,13 +93,10 @@
 </head>
 <body>
   <h1>🎄 Leia oma jõulusõnum! 🎅</h1>
-  <p>Kirjuta oma nimi ja vaata, mida päkapikud sulle ütlesid:</p>
+  <p>Kirjuta oma nimi või kood ja vaata, mida jõulujumal sulle ütles:</p>
   <input type="text" id="name" placeholder="Sinu nimi">
-  <button onclick="showMessage()">Näita sõnumit</button>
-
-  <div class="scroll-container">
-    <div class="message" id="message"></div>
-  </div>
+  <button onclick="showMessage()">Näita kirja!</button>
+  <div class="message" id="message"></div>
 
   <div class="footer">✨ Häid jõule kõigile! ✨</div>
 
@@ -191,7 +146,7 @@
       else if (name === "loore") msg = "tubli töö, helin. see töötab.";
       else if (name === "georg") msg = "tubli töö, helin. see töötab.";
 
-      else msg = "🎁 Sinule pole kirju. Ehk päkapikk eksis uksega?";
+      else msg = "🎁 Sinule pole kirju. Ehk panid midagi valesti?";
 
       document.getElementById('message').textContent = msg;
     }
