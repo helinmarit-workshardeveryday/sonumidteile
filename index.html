@@ -92,13 +92,13 @@
 </style>
 </head>
 <body>
-  <h1>🎄 Leia oma jõulusõnum! 🎅</h1>
-  <p>Kirjuta oma nimi või kood ja vaata, mida jõulujumal sulle ütles:</p>
+  <h1>🎄 Leia oma enda kiri otse Jõulujumalalt!! 🎅</h1>
+  <p>Kirjuta oma AUS ja PÄRIS nimi ja vaata, mida Jõulujumal sulle ütles:</p>
   <input type="text" id="name" placeholder="Sinu nimi">
-  <button onclick="showMessage()">Näita kirja!</button>
+  <button onclick="showMessage()">Näita sõnumit</button>
   <div class="message" id="message"></div>
 
-  <div class="footer">✨ Häid jõule kõigile! ✨</div>
+  <div class="footer">✨ Häid varaseid jõule kõigile! ✨</div>
 
   <script>
     // snowflakes / sparkles
@@ -119,34 +119,34 @@
       let msg = "";
 
       // unique messages
-      if (name === "tristan") msg = "hei tristan! kas see junn töötab?";
-      else if (name === "adeele") msg = "hei allu kuidas jänku elab? kas see asi töötab?";
-      else if (name === "maria") msg = "hei hei mannu! miks sa kõnest leavisid?";
-      else if (name === "helin") msg = "heh ma olen tark";
-      else if (name === "sandra") msg = "säh siin on sulle kiri";
+      if (name === "tristan") msg = "hei tristan! sina ei peaks praegu siin ju olema...";
+      else if (name === "adeele") msg = "hei adeele! sa ei peaks praegu siin olema!";
+      else if (name === "maria") msg = "hei maria! praegu pole sinu aeg siin olla. :)";
+      else if (name === "helin") msg = "helin mida SINA siin teed?!";
+      else if (name === "sandra") msg = "sandra, tee õiget tööd, ära mässa siin!";
 
       // all others individually listed
-      else if (name === "sonja") msg = "tubli töö, helin. see töötab.";
-      else if (name === "eleriin") msg = "tubli töö, helin. see töötab.";
-      else if (name === "teodor") msg = "tubli töö, helin. see töötab.";
-      else if (name === "ruben") msg = "tubli töö, helin. see töötab.";
-      else if (name === "trevon") msg = "tubli töö, helin. see töötab.";
-      else if (name === "natali") msg = "tubli töö, helin. see töötab.";
-      else if (name === "fjodor") msg = "tubli töö, helin. see töötab.";
-      else if (name === "mia") msg = "tubli töö, helin. see töötab.";
-      else if (name === "elise") msg = "tubli töö, helin. see töötab.";
-      else if (name === "konrad") msg = "tubli töö, helin. see töötab.";
-      else if (name === "martin") msg = "tubli töö, helin. see töötab.";
-      else if (name === "toomas") msg = "tubli töö, helin. see töötab.";
-      else if (name === "liisi") msg = "tubli töö, helin. see töötab.";
-      else if (name === "sofia") msg = "tubli töö, helin. see töötab.";
-      else if (name === "rander") msg = "tubli töö, helin. see töötab.";
-      else if (name === "anton") msg = "tubli töö, helin. see töötab.";
-      else if (name === "hugo") msg = "tubli töö, helin. see töötab.";
-      else if (name === "loore") msg = "tubli töö, helin. see töötab.";
-      else if (name === "georg") msg = "tubli töö, helin. see töötab.";
+      else if (name === "sonja") msg = "Hei, Plika! Väike asi on vahepeal juhtunud... Mul on ära kadunud enda piparkoogi glasuur! Kuidas olen ma tõeline Jõulujumal ilma glasuurita?! Ega maitsetu piparkook ei ole ju mingisugune piparkook.. Aita mind! Vastutasuks saad hiljem minult midagi.. Mis see küll on? Leia oma grupikaaslased. Sina oled grupp 1: Eesti keel. Liigu ümbriku juurde, mille peale on kirjutatud EESTI KEEL ja vaata, kellega oled :)";
+      else if (name === "eleriin") msg = "Hei, Plika! Väike asi on vahepeal juhtunud... Mul on ära kadunud enda piparkoogi glasuur! Kuidas olen ma tõeline Jõulujumal ilma glasuurita?! Ega maitsetu piparkook ei ole ju mingisugune piparkook.. Aita mind! Vastutasuks saad hiljem minult midagi.. Mis see küll on? Leia oma grupikaaslased. Sina oled grupp 1: Eesti keel. Liigu ümbriku juurde, mille peale on kirjutatud EESTI KEEL ja vaata, kellega oled :)";
+      else if (name === "teodor") msg = "Terekest, laps! Mul on suur probleem. Aita vanurit! Etiketi järgi pead seda tegema. No nii, mul on kaduma läinud enda delikaatsed piparkoogiglasuurid  mis tulid otse Jaapanist. Muide, võin neid sulle natukene anda, kui aitad. Liigu oma grupi juurde. Sinu grupp on 4: Muusika. Liigu ümbriku juurde MUUSIKA ja vaata, kellega koos oled ;)";
+      else if (name === "ruben") msg = "Hei-hei, lapsukesed! Mul on vaja teie abi! Väike jama on juhtunud… Mul on kadunud ära mu piparkoogiglasuur! Piparkook ilma kaunistuseta on ju lihtsalt… pruun küpsis! Aita mind, enne kui päris depressiooni lähen! Vastutasuks saad midagi magusat… aga mis see küll olla võiks? Leia oma grupp, 6: inglise keel Liigu ümbriku juurde mille peal INGLISE KEEL ja vaata kellega koos mind aidata saad :)";
+      else if (name === "trevon") msg = "Terekest, laps! Mul on suur probleem. Aita vanurit! Etiketi järgi pead seda tegema. No nii, mul on kaduma läinud enda delikaatsed piparkoogiglasuurid  mis tulid otse Jaapanist. Muide, võin neid sulle natukene anda, kui aitad. Liigu oma grupi juurde. Sinu grupp on 4: Muusika. Liigu ümbriku juurde MUUSIKA ja vaata, kellega koos oled ;)";
+      else if (name === "natali") msg = "Terekest, laps! Mul on suur probleem. Aita vanurit! Etiketi järgi pead seda tegema. No nii, mul on kaduma läinud enda delikaatsed piparkoogiglasuurid  mis tulid otse Jaapanist. Muide, võin neid sulle natukene anda, kui aitad. Liigu oma grupi juurde. Sinu grupp on 4: Muusika. Liigu ümbriku juurde MUUSIKA ja vaata, kellega koos oled ;)";
+      else if (name === "fjodor") msg = "Jou, TIKi õpipoiss! Oled tugev ja tark Eesti mehine mees! TIKis on alasti suur koormus, olen selles kindel. Võta asjaks ja aita mind minu murega! Minu piparkoogiglasuurid on täiesti kadunud! Sina suur ja tugev oled perfektne mees kes sellega aitaks! Võibolla on sulle isegi preemia! Sina oled grupp 5: Ajalugu. Liigu ümbriku juurde mille peal on kirjas AJALUGU ja vaata kellega oled :)";
+      else if (name === "mia") msg = "Hei, Plika! Väike asi on vahepeal juhtunud... Mul on ära kadunud enda piparkoogi glasuur! Kuidas olen ma tõeline Jõulujumal ilma glasuurita?! Ega maitsetu piparkook ei ole ju mingisugune piparkook.. Aita mind! Vastutasuks saad hiljem minult midagi.. Mis see küll on? Leia oma grupikaaslased. Sina oled grupp 1: Eesti keel. Liigu ümbriku juurde, mille peale on kirjutatud EESTI KEEL ja vaata, kellega oled :)";
+      else if (name === "elise") msg = "Terekest, laps! Mul on suur probleem. Aita vanurit! Etiketi järgi pead seda tegema. No nii, mul on kaduma läinud enda delikaatsed piparkoogiglasuurid  mis tulid otse Jaapanist. Muide, võin neid sulle natukene anda, kui aitad. Liigu oma grupi juurde. Sinu grupp on 4: Muusika. Liigu ümbriku juurde MUUSIKA ja vaata, kellega koos oled ;)";
+      else if (name === "konrad") msg = "Jou, TIKi õpipoiss! Oled tugev ja tark Eesti mehine mees! TIKis on alasti suur koormus, olen selles kindel. Võta asjaks ja aita mind minu murega! Minu piparkoogiglasuurid on täiesti kadunud! Sina suur ja tugev oled perfektne mees kes sellega aitaks! Võibolla on sulle isegi preemia! Sina oled grupp 5: Ajalugu. Liigu ümbriku juurde mille peal on kirjas AJALUGU ja vaata kellega oled :)";
+      else if (name === "martin") msg = "Hei-hei, lapsukesed! Mul on vaja teie abi! Väike jama on juhtunud… Mul on kadunud ära mu piparkoogiglasuur! Piparkook ilma kaunistuseta on ju lihtsalt… pruun küpsis! Aita mind, enne kui päris depressiooni lähen! Vastutasuks saad midagi magusat… aga mis see küll olla võiks? Leia oma grupp, 6: inglise keel Liigu ümbriku juurde mille peal INGLISE KEEL ja vaata kellega koos mind aidata saad :)";
+      else if (name === "toomas") msg = "Tere tulemast, noor poiss! On juhtunud midagi KATASTROOFILIST! Minu glasuur on kadunud, jah, olen tõesti selle kaotanud! Kuidas olen tõeline jõulujumal ilma glasuurita?! Ega maitsetu piparkook ei ole mingisugune piparkook... Mul on vaja sinu, just SINU abi! Vastutasuks võid midagi minult saada.. Näeme seda hiljem! Leia oma grupikaaslased. Sina oled grupp 2: Loodusõpetus. Liigu ümbriku juurde, mille peale on kirjutatud LOODUSÕPETUS ja vaata, kellega oled >:)";
+      else if (name === "liisi") msg = "Tsau sõbrants! Kuidas läheb? Mul läheb nagu super super super- Oot, jääme teemasse. Mul on kadunud piparkoogiglasuurid! Appi!!! Kuidas olen tõeline jõulujumal ilma glasuurita?! Ega maitsetu piparkook ei ole ju mingisugune piparkook… Nagu pls aita mind! Okei? Sobib???? Saad midagi hiljem! Leia oma grupikaaslased: sina oled grupp 3: Matemaatika. Liigu ümbriku juurde MATEMAATIKA ja vaata, kellega koos mind aitad! :)";
+      else if (name === "sofia") msg = "Tsau sõbrants! Kuidas läheb? Mul läheb nagu super super super- Oot, jääme teemasse. Mul on kadunud piparkoogiglasuurid! Appi!!! Kuidas olen tõeline jõulujumal ilma glasuurita?! Ega maitsetu piparkook ei ole ju mingisugune piparkook… Nagu pls aita mind! Okei? Sobib???? Saad midagi hiljem! Leia oma grupikaaslased: sina oled grupp 3: Matemaatika. Liigu ümbriku juurde MATEMAATIKA ja vaata, kellega koos mind aitad! :)";
+      else if (name === "rander") msg = "Hei-hei, lapsukesed! Mul on vaja teie abi! Väike jama on juhtunud… Mul on kadunud ära mu piparkoogiglasuur! Piparkook ilma kaunistuseta on ju lihtsalt… pruun küpsis! Aita mind, enne kui päris depressiooni lähen! Vastutasuks saad midagi magusat… aga mis see küll olla võiks? Leia oma grupp, 6: inglise keel Liigu ümbriku juurde mille peal INGLISE KEEL ja vaata kellega koos mind aidata saad :)";
+      else if (name === "anton") msg = "Tere tulemast, noor poiss! On juhtunud midagi KATASTROOFILIST! Minu glasuur on kadunud, jah, olen tõesti selle kaotanud! Kuidas olen tõeline jõulujumal ilma glasuurita?! Ega maitsetu piparkook ei ole mingisugune piparkook... Mul on vaja sinu, just SINU abi! Vastutasuks võid midagi minult saada.. Näeme seda hiljem! Leia oma grupikaaslased. Sina oled grupp 2: Loodusõpetus. Liigu ümbriku juurde, mille peale on kirjutatud LOODUSÕPETUS ja vaata, kellega oled >:)";
+      else if (name === "hugo") msg = "Jou, TIKi õpipoiss! Oled tugev ja tark Eesti mehine mees! TIKis on alasti suur koormus, olen selles kindel. Võta asjaks ja aita mind minu murega! Minu piparkoogiglasuurid on täiesti kadunud! Sina suur ja tugev oled perfektne mees kes sellega aitaks! Võibolla on sulle isegi preemia! Sina oled grupp 5: Ajalugu. Liigu ümbriku juurde mille peal on kirjas AJALUGU ja vaata kellega oled :)";
+      else if (name === "loore") msg = "Tsau sõbrants! Kuidas läheb? Mul läheb nagu super super super- Oot, jääme teemasse. Mul on kadunud piparkoogiglasuurid! Appi!!! Kuidas olen tõeline jõulujumal ilma glasuurita?! Ega maitsetu piparkook ei ole ju mingisugune piparkook… Nagu pls aita mind! Okei? Sobib???? Saad midagi hiljem! Leia oma grupikaaslased: sina oled grupp 3: Matemaatika. Liigu ümbriku juurde MATEMAATIKA ja vaata, kellega koos mind aitad! :)";
+      else if (name === "georg") msg = "Tere tulemast, noor poiss! On juhtunud midagi KATASTROOFILIST! Minu glasuur on kadunud, jah, olen tõesti selle kaotanud! Kuidas olen tõeline jõulujumal ilma glasuurita?! Ega maitsetu piparkook ei ole mingisugune piparkook... Mul on vaja sinu, just SINU abi! Vastutasuks võid midagi minult saada.. Näeme seda hiljem! Leia oma grupikaaslased. Sina oled grupp 2: Loodusõpetus. Liigu ümbriku juurde, mille peale on kirjutatud LOODUSÕPETUS ja vaata, kellega oled >:)";
 
-      else msg = "🎁 Sinule pole kirju. Ehk panid midagi valesti?";
+      else msg = "🎁 Sinule pole kirju. Ehk panid nime valesti?";
 
       document.getElementById('message').textContent = msg;
     }
